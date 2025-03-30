@@ -7,5 +7,5 @@ from dotenv import load_dotenv
 load_dotenv()
 
 engine = create_engine(getenv('DB_URL'), echo=True, pool_size=20, max_overflow=0)
-Sesion = sessionmaker(bind=engine)
+Session = sessionmaker(bind=engine)
 Base = declarative_base()
